@@ -22,11 +22,12 @@ void pattern19(int n);
 void pattern20(int n);
 void pattern21(int n);
 void pattern22(int n);
+void pattern23(int n);
 
 
 
 int main( ) {
-    pattern20(5);
+    pattern23(3);
     return 0;
 }
 
@@ -332,7 +333,45 @@ void pattern20(int n) {
 }
 
 void pattern21( int n){
-    for( int i = 0; i < n; i++)
-    cout << "*";
-    for
+    for( int i = 0; i <= n; i++){
+        for (int j = 0; j <= n; j++){
+            if (i == 0 || i == n || j == 0 || j == n){
+                cout << "*";
+            }
+            else{
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+    
+}
+
+void pattern22(int n){   
+    int k, l = 0;
+    int side = 2*n - 1;
+    int f = n;
+    for ( int i = 0; i <= side; i++){
+        for (int j = 0; j <= side; j++){
+            if ( i == 0 || i == side || j == 0 || j == side){
+                cout << n;
+            }
+
+        }
+            cout << endl;
+
+    }
+    cout << endl;
+    }
+
+
+void pattern23(int n){
+    int sides = 2*n - 1;
+    for (int i = 0; i<= sides; i++){
+        for (int j = 0; j <= sides; j++){
+            int min = i < j ? i : j;
+            cout << n - min << " ";
+        }
+        cout << endl;
+    }
 }

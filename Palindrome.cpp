@@ -19,8 +19,5 @@ void reverse_array(int arr[], int n){
 }
 
 int main() {
-    int n = 5;
-   int arr[] = { 5, 4, 3, 2, 1};
-   reverse_array(arr, n);
-   return 0;
+    return 0;
 }
