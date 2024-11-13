@@ -35,6 +35,9 @@ node* buildTree(node* root){
 }
 
 void levelOrderTraversal(node* root){
+    if (root == NULL){
+        return;
+    }
     queue <node*> q;
     q.push(root);
     q.push(NULL);
@@ -132,6 +135,38 @@ void buildFromLevelOrder(node* &root){
 
         
     }
+}
+
+void reverseOrderTraversal(node* root){
+    if(root == NULL){
+        return;
+    }
+    queue <node*> q;
+    stack <node*> s;
+    q.push(root)
+    q.push(NULL);
+
+    while(!q.empty()){
+        node* temp = q.front();
+        q.pop();
+        s.push(temp);
+
+        if (temp -> left){
+            q.push(temp -> left);
+        }
+            
+
+        if (temp -> right){
+            q.push(temp -> right);
+        }
+    }
+
+    while(!s.empty()){
+        cout<<s.top()-> data << " ";
+        s.pop();
+    }
+    cout<<endl;
+
 }
 
 
